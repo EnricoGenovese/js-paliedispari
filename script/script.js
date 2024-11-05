@@ -57,34 +57,54 @@ if(revWord.toLowerCase() === userWord.toLowerCase()) {
 // Chiediamo all'utente di inserire un numero compreso tra 1 e 5;
 // controlliamo sia un numero e nel range corretto
 
-const userNumber = prompt("Insersici un numero tra 1 e 5");
-if(isNaN(userNumber) && userNumber >= 1 && userNumber <= 5) {
-    console.log(userNumber);
-} else {
-    console.log("Inserisci un numero tra 1 e 5");
+let userNumber;
+let un_flag = true;   // variabile flag di user number per uscire dal ciclo while
+
+while (un_flag) {
+    userNumber = prompt("Insersici un numero tra 1 e 5");
+
+    if(!isNaN(userNumber) && userNumber >= 1 && userNumber <= 5) {
+        un_flag = false;
+        console.log(userNumber);
+    } else {
+        console.log("Inserisci un numero tra 1 e 5");
+    }    
+} 
+
+// Chidiamo all'utente di scegliere tra pari e dispari; controlliamo la validità dell'input
+
+let userChoice;
+let uc_flag = true;   // variabile flag di user choice per uscire dal ciclo while
+
+while(uc_flag) {
+    userChoice = prompt("Scegli pari o dispari");
+
+    if(userChoice === "pari" || userChoice === "dispari") {
+        uc_flag = false;
+        console.log(userChoice);
+    } else {
+        console.log("Scegli pari o dispari");
+    }
 }
- 
 
-// Chidiamo all'utente di scegliere tra pari e dispari
 
-// const userChoice = prompt("Scegli pari o dispari");
-// console.log(userChoice);
-
-// Generiamo un numero randomico per il PC tra 1 e 5
+// Generiamo un numero randomico per il PC tra 1 e 5 con una funzione di RNG 
+// da un minimo a un massimo (i parametri della funzione quando invocata)
 
 let pcRandNum = randNumGen(1, 5);
 console.log(pcRandNum);
 
 // Somma delle giocate e dichiarazione del vincitore
 
-let sum = userNumber + pcRandNum;
-if(userChoice === "pari" && isEven(sum)){
+let sum = parseInt(userNumber) + pcRandNum;
+console.log(sum);
+// le due condizoni di vittoria sono: ["pari" e somma pari o "dispari" e somma dispari]
+if(userChoice === "pari" && isEven(sum) || userChoice === "dispari" && !isEven(sum)) {
+    // la funzione isEven() restituisce un boolean; userChoice compara l'input con una stringa specifica
     console.log("Vince il giocatore");
 } else {
     console.log("Vince la CPU. Riprova");
 }
-
-
 
 
 
