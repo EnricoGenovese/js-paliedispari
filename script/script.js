@@ -9,22 +9,23 @@ console.clear();
 
 // Il primo passaggio è creare una variabile di input in cui l'utente può inserire una parola 
 
-// const userInput = prompt("Inserire una parola");
+const userInput = prompt("Inserire una parola");
 
 // La varaibile della parola deve essere poi passata in una funzione per 
 // determinarne l'eventuale palindromia
 
-const userWord = "otto";
+const userWord = userInput;
 console.log(userWord);
 
 const revWord = revertWord(userWord);
 console.log(revWord);
 
-// if(reverted.toLowerCase() === word.toLowerCase()) {
-//     console.log("La parola è palindroma")
-// } else {
-//     console.log("La parola non è palindroma")
-// }
+
+if(revWord.toLowerCase() === userWord.toLowerCase()) {
+    console.log("La parola è palindroma")
+} else {
+    console.log("La parola non è palindroma")
+}
 
 // La funzione per 'spacchettare' la parola data e reinserirla invertita in una nuova stringa
 /**
@@ -32,10 +33,10 @@ console.log(revWord);
  * @param {string} word 
  * 
  */
-function revertWord(userWord) {
+function revertWord(word) {
     let reverted = "";
     //
-    for(let i = userWord.length - 1; i >= 0; i--) {
+    for(let i = word.length - 1; i >= 0; i--) {
         reverted += word[i];
     }
     return reverted;
