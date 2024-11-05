@@ -6,7 +6,7 @@ console.clear();
     1 - Chiedere all’utente di inserire una parola
     2 - Creare una funzione per capire se la parola inserita è palindroma
 */
-/*
+
 // Il primo passaggio è creare una variabile di input in cui l'utente può inserire una parola 
 
 const userInput = prompt("Inserire una parola");
@@ -34,8 +34,8 @@ if(revWord.toLowerCase() === userWord.toLowerCase()) {
  * 
  * @abstract revert a string by adding its characters from the back to the top, using the indexes of the
  * string's characters
- */
-/*function revertWord(word) {
+*/
+function revertWord(word) {
     let reverted = "";
     //
     for(let i = word.length - 1; i >= 0; i--) {
@@ -43,7 +43,7 @@ if(revWord.toLowerCase() === userWord.toLowerCase()) {
     }
     return reverted;
 }   
-*/
+
 /* ------------------------------------------------------------------------------------------- */
 
 /* Esercizio 2 - Pari e Dispari 
