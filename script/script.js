@@ -20,8 +20,8 @@ console.log(userWord);
 const revWord = revertWord(userWord);
 console.log(revWord);
 
-
-if(revWord.toLowerCase() === userWord.toLowerCase()) {
+//funziona anche con le parole con una lettera maiuscola?
+if(revWord.toLowerCase() === userWord.toLowerCase()) { 
     console.log("La parola è palindroma")
 } else {
     console.log("La parola non è palindroma")
