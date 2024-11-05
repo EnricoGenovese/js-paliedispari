@@ -2,7 +2,7 @@
 
 console.clear();
 
-/* Esercizio 1 - Palidroma 
+/* Esercizio 1 - Palindromia 
     1 - Chiedere all’utente di inserire una parola
     2 - Creare una funzione per capire se la parola inserita è palindroma
 */
@@ -20,7 +20,7 @@ console.log(userWord);
 const revWord = revertWord(userWord);
 console.log(revWord);
 
-//funziona anche con le parole con una lettera maiuscola?
+// funziona anche con le parole con una lettera maiuscola?
 if(revWord.toLowerCase() === userWord.toLowerCase()) { 
     console.log("La parola è palindroma")
 } else {
@@ -32,6 +32,8 @@ if(revWord.toLowerCase() === userWord.toLowerCase()) {
  * 
  * @param {string} word 
  * 
+ * @abstract revert a string by adding its characters from the back to the top, using the indexes of the
+ * string's characters
  */
 function revertWord(word) {
     let reverted = "";
@@ -42,12 +44,7 @@ function revertWord(word) {
     return reverted;
 }   
 
-
-
-
-
-
-
+/* ------------------------------------------------------------------------------------------- */
 
 /* Esercizio 2 - Pari e Dispari 
     1 - L’utente sceglie pari o dispari e inserisce un numero da 1 a 5.
@@ -57,3 +54,11 @@ function revertWord(word) {
     5 - Dichiariamo chi ha vinto.
 */
 
+// Chiediamo all'utente di inserire un numero compreso tra 1 e 5;
+// controlliamo sia un numero e nel range corretto
+
+const userNumber = prompt("Insersici un numero tra 1 e 5");
+
+// Chidiamo all'utente di scegliere tra pari e dispari
+
+const userChoice = prompt("Scegli pari o dispari")
