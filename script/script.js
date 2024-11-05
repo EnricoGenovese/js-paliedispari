@@ -58,15 +58,37 @@ if(revWord.toLowerCase() === userWord.toLowerCase()) {
 // controlliamo sia un numero e nel range corretto
 
 const userNumber = prompt("Insersici un numero tra 1 e 5");
+if(isNaN(userNumber) && userNumber >= 1 && userNumber <= 5) {
+    console.log(userNumber);
+} else {
+    console.log("Inserisci un numero tra 1 e 5");
+}
+ 
 
 // Chidiamo all'utente di scegliere tra pari e dispari
 
-const userChoice = prompt("Scegli pari o dispari")
+// const userChoice = prompt("Scegli pari o dispari");
+// console.log(userChoice);
+
+// Generiamo un numero randomico per il PC tra 1 e 5
+
+let pcRandNum = randNumGen(1, 5);
+console.log(pcRandNum);
+
+// Somma delle giocate e dichiarazione del vincitore
+
+let sum = userNumber + pcRandNum;
+if(userChoice === "pari" && isEven(sum)){
+    console.log("Vince il giocatore");
+} else {
+    console.log("Vince la CPU. Riprova");
+}
 
 
 
 
 
+// Funzioni
 // RNG
 
 /**
