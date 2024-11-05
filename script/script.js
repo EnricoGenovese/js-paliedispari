@@ -54,6 +54,23 @@ if(revWord.toLowerCase() === userWord.toLowerCase()) {
     5 - Dichiariamo chi ha vinto.
 */
 
+
+// Chidiamo all'utente di scegliere tra pari e dispari; controlliamo la validità dell'input
+
+let userChoice;
+let uc_flag = true;   // variabile flag di user choice per uscire dal ciclo while
+
+while(uc_flag) {
+    userChoice = prompt("Scegli pari o dispari");
+    
+    if(userChoice === "pari" || userChoice === "dispari") {
+        uc_flag = false;
+        console.log(userChoice);
+    } else {
+        console.log("Scegli pari o dispari");
+    }
+}
+
 // Chiediamo all'utente di inserire un numero compreso tra 1 e 5;
 // controlliamo sia un numero e nel range corretto
 
@@ -70,23 +87,6 @@ while (un_flag) {
         console.log("Inserisci un numero tra 1 e 5");
     }    
 } 
-
-// Chidiamo all'utente di scegliere tra pari e dispari; controlliamo la validità dell'input
-
-let userChoice;
-let uc_flag = true;   // variabile flag di user choice per uscire dal ciclo while
-
-while(uc_flag) {
-    userChoice = prompt("Scegli pari o dispari");
-
-    if(userChoice === "pari" || userChoice === "dispari") {
-        uc_flag = false;
-        console.log(userChoice);
-    } else {
-        console.log("Scegli pari o dispari");
-    }
-}
-
 
 // Generiamo un numero randomico per il PC tra 1 e 5 con una funzione di RNG 
 // da un minimo a un massimo (i parametri della funzione quando invocata)
