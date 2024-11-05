@@ -6,7 +6,7 @@ console.clear();
     1 - Chiedere all’utente di inserire una parola
     2 - Creare una funzione per capire se la parola inserita è palindroma
 */
-
+/*
 // Il primo passaggio è creare una variabile di input in cui l'utente può inserire una parola 
 
 const userInput = prompt("Inserire una parola");
@@ -35,7 +35,7 @@ if(revWord.toLowerCase() === userWord.toLowerCase()) {
  * @abstract revert a string by adding its characters from the back to the top, using the indexes of the
  * string's characters
  */
-function revertWord(word) {
+/*function revertWord(word) {
     let reverted = "";
     //
     for(let i = word.length - 1; i >= 0; i--) {
@@ -43,7 +43,7 @@ function revertWord(word) {
     }
     return reverted;
 }   
-
+*/
 /* ------------------------------------------------------------------------------------------- */
 
 /* Esercizio 2 - Pari e Dispari 
@@ -62,3 +62,34 @@ const userNumber = prompt("Insersici un numero tra 1 e 5");
 // Chidiamo all'utente di scegliere tra pari e dispari
 
 const userChoice = prompt("Scegli pari o dispari")
+
+
+
+
+
+// RNG
+
+/**
+ * 
+ * @param {number} min 
+ * @param {number} max 
+ * 
+ * Generates an integer from min to max (included);
+ */
+function randNumGen(min, max) {
+    const rand = Math.floor(Math.random() * (max + min - 1)) + min;
+    return rand;
+}
+
+// Is Even (bool)
+
+/**
+ * 
+ * @param {num} num 
+ * @returns boolean
+ * 
+ * @abstract Returns true if num is even, else return false
+ */
+function isEven(num) {
+    return num % 2 === 0;
+}
